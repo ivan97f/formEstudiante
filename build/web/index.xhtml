@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Registro de Personal</title>
+    </h:head>
+    <h:body>
+        <h1>Registro de Estudaintes</h1>
+        <f:view>
+            <h:form>
+                <h:panelGrid>
+                    <h:outputText value="Id"/>
+                    <h:inputTextarea value="#{estudianteJSFManagedBean.estud.id}"/>
+                    <h:outputText value="Nombre"/>
+                    <h:inputTextarea value="#{estudianteJSFManagedBean.estud.nombre}"/>
+                    <h:outputText value="Seccion"/>
+                    <h:inputTextarea value="#{estudianteJSFManagedBean.estud.seccion}"/>
+                    <h:outputText value="Email"/>
+                    <h:inputTextarea value="#{estudianteJSFManagedBean.estud.email}"/>
+                </h:panelGrid>
+                
+                <h:commandButton value="Validar" action="#{estudianteJSFManagedBean.validar()}"/>
+                <h:commandButton value="Modificar" action="#{estudianteJSFManagedBean.modificar()}"/>
+                <h:commandButton value="Eliminar" action="#{estudianteJSFManagedBean.suprimir()}"/>
+            </h:form>
+        </f:view>
+    </h:body>
+</html>
+
